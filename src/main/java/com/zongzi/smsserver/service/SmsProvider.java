@@ -61,7 +61,7 @@ public class SmsProvider {
      *
      */
 
-    public SmsSendResponse sendSmsRequest(HashMap<String, String> params) {
+    public SmsSendResponse sendSmsRequest(Map<String, String> params) {
         StringBuilder sb = new StringBuilder();
         sb.append(baseUrl);
         sb.append("?");
@@ -78,7 +78,7 @@ public class SmsProvider {
         return null;
     }
 
-    private String buildParams(HashMap<String, String> params) {
+    private String buildParams(Map<String, String> params) {
         String sortQueryString = null;
         try {
             sortQueryString = generateParamStr(params);
@@ -102,8 +102,6 @@ public class SmsProvider {
             return null;
         }
     };
-
-
 
 
 //    public void initParams()

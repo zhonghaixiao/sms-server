@@ -9,13 +9,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class SmsSendRequest{
-    String PhoneNumbers;  //接收短信的手机号码。
-    String SignName; //短信签名名称
+public class SmsSendBatchRequest {
+    String PhoneNumberJson;  //接收短信的手机号码。
+    String SignNameJson; //短信签名名称
     String TemplateCode; //短信模板ID
-    String OutId;//外部流水扩展字段。
-    String SmsUpExtendCode; //上行短信扩展码，无特殊需要此字段的用户请忽略此字段。
-    String TemplateParam; //短信模板变量对应的实际值，JSON格式 ,, {"code":"1111"}
+    String SmsUpExtendCodeJson; //上行短信扩展码，无特殊需要此字段的用户请忽略此字段。
+    String TemplateParamJson; //短信模板变量对应的实际值，JSON格式 ,, {"code":"1111"}
     //公共参数
     String Signature; //请求签名，即最终生成的签名结果值。
     String AccessKeyId; //访问密钥 ID。AccessKey 用于调用 API。
